@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Khairun Nafisa | Portofolio RPL</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Pacifico&display=swap">
+<style>
+:root{
+  --bg:#fff1f4;--cream:#fff9f2;--card:#ffffff;--ink:#5b2a38;--muted:#8a5a67;
+  --berry:#e8445a;--berry-ink:#ffffff;--pink:#ffc9d6;--blush:#ffe0e8;--leaf:#8fd1a0;--leaf-d:#3f8f5a;--seed:#fff3c4;--line:#f6b8c7;
+  --check:rgba(232,68,90,.13);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#2a1219;--cream:#34171f;--card:#3d1b25;--ink:#ffe6ec;--muted:#e5aab9;
+    --berry:#ff6b81;--berry-ink:#2a1219;--pink:#7a3446;--blush:#4a2230;--leaf:#8fd1a0;--leaf-d:#8fd1a0;--seed:#ffe9a8;--line:#6b3040;
+    --check:rgba(255,107,129,.14);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#2a1219;--cream:#34171f;--card:#3d1b25;--ink:#ffe6ec;--muted:#e5aab9;
+  --berry:#ff6b81;--berry-ink:#2a1219;--pink:#7a3446;--blush:#4a2230;--leaf:#8fd1a0;--leaf-d:#8fd1a0;--seed:#ffe9a8;--line:#6b3040;
+  --check:rgba(255,107,129,.14);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:"Fredoka",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.65;
+  background-color:var(--bg);
+  background-image:radial-gradient(var(--pink) 1.6px,transparent 1.7px);background-size:26px 26px}
+a{color:var(--berry)}
+:focus-visible{outline:3px solid var(--leaf-d);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+.gingham{background-color:var(--cream);background-image:linear-gradient(90deg,var(--check) 50%,transparent 50%),linear-gradient(var(--check) 50%,transparent 50%);background-size:28px 28px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.berry{display:inline-block;width:1em;height:1.1em;vertical-align:-.15em}
+
+/* navigasi */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--cream);border-bottom:3px dashed var(--berry)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.logo{font-family:"Pacifico",cursive;color:var(--berry);font-size:1.3rem;display:flex;align-items:center;gap:6px}
+.top nav{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.top nav a{text-decoration:none;color:var(--ink);font-weight:500;padding:5px 14px;border-radius:999px}
+.top nav a:hover{background:var(--pink)}
+.theme{font:inherit;font-size:.9rem;background:var(--berry);color:var(--berry-ink);border:0;border-radius:999px;padding:6px 14px;cursor:pointer}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:54px 0 70px}
+.chip{display:inline-block;background:var(--card);border:2px solid var(--berry);color:var(--berry);border-radius:999px;padding:4px 16px;font-weight:600;margin-bottom:14px}
+.hero h1{font-family:"Pacifico",cursive;font-weight:400;font-size:clamp(2.6rem,8vw,4.9rem);line-height:1.1;margin:0 0 14px;color:var(--berry);text-shadow:3px 3px 0 var(--pink)}
+.lead{font-size:1.15rem;max-width:34ch;margin:0 0 26px;color:var(--muted)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{text-decoration:none;font-weight:600;border-radius:999px;padding:12px 26px;border:2px solid var(--berry);display:inline-block}
+.btn.pri{background:var(--berry);color:var(--berry-ink);box-shadow:0 5px 0 var(--leaf-d)}
+.btn.pri:active{transform:translateY(3px);box-shadow:0 2px 0 var(--leaf-d)}
+.btn.sec{color:var(--berry);background:var(--card)}
+.stage{position:relative;display:grid;place-items:center}
+.stage::before{content:"";position:absolute;width:88%;aspect-ratio:1;border-radius:50%;background:var(--blush);border:3px dashed var(--berry)}
+.big{position:relative;width:min(78%,300px);background:none;border:0;padding:0;cursor:pointer;animation:bob 4s ease-in-out infinite}
+.big svg{width:100%;height:auto;display:block;filter:drop-shadow(0 10px 0 rgba(143,209,160,.55))}
+.bubble{position:absolute;right:0;top:4%;background:var(--card);border:2px solid var(--berry);border-radius:18px 18px 18px 4px;padding:6px 14px;font-weight:600;font-size:.92rem}
+.hint{position:absolute;bottom:0;font-size:.85rem;color:var(--muted)}
+@keyframes bob{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-10px)}}
+
+/* section */
+section{padding:46px 0}
+h2{font-family:"Pacifico",cursive;font-weight:400;font-size:clamp(1.8rem,5vw,2.5rem);color:var(--berry);margin:0 0 22px;display:flex;align-items:center;gap:10px}
+h2 .berry{font-size:1.2em}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.about p{margin:0 0 14px;max-width:58ch}
+.panel{background:var(--card);border:3px solid var(--berry);border-radius:26px;padding:24px;box-shadow:8px 8px 0 var(--pink)}
+.facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:10px 16px}
+.facts dt{color:var(--muted)}.facts dd{margin:0;font-weight:600}
+
+/* keahlian */
+.skills{display:flex;flex-wrap:wrap;gap:12px;list-style:none;padding:0;margin:0}
+.skills li{display:flex;align-items:center;gap:8px;background:var(--card);border:2px solid var(--berry);border-radius:999px 999px 999px 999px;padding:7px 18px 7px 12px;font-weight:600}
+.skills li:nth-child(even){background:var(--blush)}
+.skills .berry{font-size:1.3em}
+
+/* proyek */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.proj{background:var(--card);border:3px solid var(--berry);border-radius:24px;overflow:hidden}
+.proj .head{height:64px;display:flex;align-items:flex-end;padding:0 18px;border-bottom:3px solid var(--berry);font-size:1.7rem}
+.proj .body{padding:16px 20px 22px}
+.proj h3{margin:0 0 6px;font-size:1.2rem}
+.proj p{margin:0 0 10px;color:var(--muted)}
+.tag{display:inline-block;background:var(--leaf);color:#23492f;border-radius:999px;padding:2px 12px;font-size:.85rem;font-weight:600}
+.note{font-size:.9rem;color:var(--muted);margin-top:16px;background:var(--seed);color:#6b4b00;display:inline-block;padding:4px 14px;border-radius:12px}
+
+.contact ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.contact li{display:flex;gap:10px;align-items:center}
+
+/* footer */
+footer{margin-top:30px;border-top:3px dashed var(--berry);text-align:center;padding:26px 20px 40px;color:var(--muted)}
+footer .row{font-size:1.4rem;letter-spacing:6px;margin-bottom:6px}
+
+/* stroberi jatuh saat diklik */
+.fall{position:fixed;top:-50px;width:32px;pointer-events:none;z-index:20;animation:drop 2.2s ease-in forwards}
+@keyframes drop{to{transform:translateY(110vh) rotate(360deg)}}
+
+@media (max-width:780px){.hero,.about{grid-template-columns:1fr}.hero{padding-top:30px}.stage{margin-top:10px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.big{animation:none}.fall{display:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sb" viewBox="0 0 100 112">
+    <path d="M50 108C20 96 4 66 9 44 13 27 31 22 50 31 69 22 87 27 91 44 96 66 80 96 50 108Z" fill="var(--berry)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M22 40C24 32 32 30 40 33" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <g fill="var(--seed)" stroke="var(--ink)" stroke-width="1.2">
+      <ellipse cx="32" cy="50" rx="3" ry="4.2"/><ellipse cx="50" cy="46" rx="3" ry="4.2"/><ellipse cx="68" cy="50" rx="3" ry="4.2"/>
+      <ellipse cx="24" cy="66" rx="3" ry="4.2"/><ellipse cx="41" cy="63" rx="3" ry="4.2"/><ellipse cx="59" cy="63" rx="3" ry="4.2"/><ellipse cx="76" cy="66" rx="3" ry="4.2"/>
+      <ellipse cx="33" cy="80" rx="3" ry="4.2"/><ellipse cx="50" cy="78" rx="3" ry="4.2"/><ellipse cx="67" cy="80" rx="3" ry="4.2"/>
+      <ellipse cx="50" cy="94" rx="3" ry="4.2"/>
+    </g>
+    <path d="M50 32C42 18 28 20 22 28 32 26 40 30 46 34 36 36 30 44 32 48 40 42 46 40 50 38 54 40 60 42 68 48 70 44 64 36 54 34 60 30 68 26 78 28 72 20 58 18 50 32Z" fill="var(--leaf)" stroke="var(--ink)" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M50 32C50 20 52 12 58 6" stroke="var(--leaf-d)" stroke-width="5" stroke-linecap="round" fill="none"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="logo"><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>Nafisa</div>
+    <nav>
+      <a href="#tentang">Tentang</a><a href="#keahlian">Keahlian</a><a href="#proyek">Proyek</a><a href="#kontak">Kontak</a>
+      <button class="theme" id="themeBtn" type="button">Ganti tema</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <span class="chip">Kelas XI · RPL</span>
+      <h1>Khairun Nafisa</h1>
+      <p class="lead">Siswi Rekayasa Perangkat Lunak di SMK Putra Anda. Suka membuat aplikasi yang manis dan berguna.</p>
+      <div class="btns">
+        <a class="btn pri" href="#proyek">Lihat proyek</a>
+        <a class="btn sec" href="#kontak">Hubungi saya</a>
+      </div>
+    </div>
+    <div class="stage">
+      <button class="big" id="berryBtn" type="button" aria-label="Klik stroberi untuk menjatuhkan stroberi">
+        <svg viewBox="0 0 100 112" role="img" aria-label="Stroberi"><use href="#sb"/></svg>
+      </button>
+      <span class="bubble">print("Halo!")</span>
+      <span class="hint">Klik stroberinya!</span>
+    </div>
+  </div>
+
+  <section id="tentang">
+    <h2><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>Tentang saya</h2>
+    <div class="about">
+      <div>
+        <p>Halo, saya Khairun Nafisa, siswi kelas XI jurusan Rekayasa Perangkat Lunak (RPL) di SMK Putra Anda.</p>
+        <p>Di RPL saya belajar membuat program, merancang basis data, dan membangun tampilan web. Saya ingin terus berlatih supaya bisa membuat aplikasi yang berguna bagi banyak orang.</p>
+      </div>
+      <div class="panel gingham">
+        <dl class="facts">
+          <dt>Nama</dt><dd>Khairun Nafisa</dd>
+          <dt>Sekolah</dt><dd>SMK Putra Anda</dd>
+          <dt>Kelas</dt><dd>XI</dd>
+          <dt>Jurusan</dt><dd>RPL</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="keahlian">
+    <h2><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>Keahlian</h2>
+    <ul class="skills">
+      <li><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>HTML</li>
+      <li><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>CSS</li>
+      <li><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>JavaScript</li>
+      <li><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>PHP</li>
+      <li><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>MySQL</li>
+      <li><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>Git &amp; GitHub</li>
+    </ul>
+    <p class="note">Contoh. Ganti dengan keahlianmu.</p>
+  </section>
+
+  <section id="proyek">
+    <h2><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>Proyek</h2>
+    <div class="projects">
+      <article class="proj">
+        <div class="head gingham" aria-hidden="true">🛒</div>
+        <div class="body"><h3>Aplikasi Stok Barang Toko</h3><p>Mencatat stok, penjualan, dan laporan keuangan toko kecil.</p><span class="tag">PHP · MySQL</span></div>
+      </article>
+      <article class="proj">
+        <div class="head gingham" aria-hidden="true">🏫</div>
+        <div class="body"><h3>Website Profil Sekolah</h3><p>Halaman informasi sekolah yang rapi di HP.</p><span class="tag">HTML · CSS</span></div>
+      </article>
+      <article class="proj">
+        <div class="head gingham" aria-hidden="true">✨</div>
+        <div class="body"><h3>Proyek berikutnya</h3><p>Tulis deskripsi singkat proyekmu di sini.</p><span class="tag">teknologi</span></div>
+      </article>
+    </div>
+    <p class="note">Contoh. Ganti dengan proyekmu.</p>
+  </section>
+
+  <section id="kontak" class="contact">
+    <h2><svg class="berry" aria-hidden="true"><use href="#sb"/></svg>Kontak</h2>
+    <div class="panel gingham">
+      <ul>
+        <li>Email: <a href="mailto:emailkamu@example.com">emailkamu@example.com</a></li>
+        <li>GitHub: <a href="https://github.com/">github.com/usernamekamu</a></li>
+        <li>Instagram: @usernamekamu</li>
+      </ul>
+    </div>
+    <p class="note">Ganti dengan kontak aslimu.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="row" aria-hidden="true">🍓🍓🍓</div>
+  © <span id="yr">2026</span> Khairun Nafisa · SMK Putra Anda
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var root=document.documentElement;
+document.getElementById('themeBtn').addEventListener('click',function(){
+  var dark=root.getAttribute('data-theme')==='dark'||(root.getAttribute('data-theme')!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches);
+  root.setAttribute('data-theme',dark?'light':'dark');
+});
+document.getElementById('berryBtn').addEventListener('click',function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  for(var i=0;i<14;i++){
+    var s=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    s.setAttribute('viewBox','0 0 100 112');s.setAttribute('class','fall');
+    s.style.left=(Math.random()*95)+'vw';s.style.width=(20+Math.random()*26)+'px';
+    s.style.animationDelay=(Math.random()*.8)+'s';
+    s.innerHTML='<use href="#sb"/>';document.body.appendChild(s);
+    (function(n){setTimeout(function(){n.remove()},3400)})(s);
+  }
+});
+</script>
+</body>
+</html>
