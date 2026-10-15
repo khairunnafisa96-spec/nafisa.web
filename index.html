@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portofolio Khairun Nafisa</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#b9e0c4; --green-d:#6fb88a; --green-xd:#3f8a5c;
+  --pink:#ffd6e0; --pink-d:#f4a6bb;
+  --red:#f28b95; --red-d:#e0606f;
+  --cream:#fff9f5; --text:#4a3b3f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Quicksand',sans-serif;color:var(--text);
+  background-color:var(--cream);
+  background-image:
+    linear-gradient(90deg,rgba(255,214,224,.45) 50%,transparent 50%),
+    linear-gradient(rgba(185,224,196,.35) 50%,transparent 50%);
+  background-size:44px 44px;
+  overflow-x:hidden;
+}
+/* ===== Motif melayang ===== */
+.float{position:fixed;font-size:28px;opacity:.55;pointer-events:none;z-index:0;animation:floaty 9s ease-in-out infinite}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-22px) rotate(10deg)}}
+.f1{top:12%;left:4%}.f2{top:30%;right:5%;animation-delay:1s}.f3{top:60%;left:6%;animation-delay:2s}
+.f4{top:80%;right:8%;animation-delay:3s}.f5{top:45%;left:48%;animation-delay:4s;font-size:22px}.f6{top:8%;right:25%;animation-delay:2.5s}
+
+/* ===== Navbar ===== */
+nav{position:sticky;top:12px;z-index:10;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;
+  width:fit-content;margin:14px auto 0;padding:8px 18px;border-radius:50px;
+  background:rgba(255,255,255,.85);backdrop-filter:blur(6px);
+  border:2px dashed var(--pink-d);box-shadow:0 6px 18px rgba(244,166,187,.3)}
+nav a{text-decoration:none;color:var(--green-xd);font-weight:700;font-size:14px;padding:6px 14px;border-radius:30px;transition:.25s}
+nav a:hover{background:var(--pink);color:var(--red-d)}
+
+section{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:60px 22px}
+h2.title{font-family:'Pacifico',cursive;font-size:34px;color:var(--red-d);text-align:center;margin-bottom:34px}
+h2.title::before{content:"🍀 "}h2.title::after{content:" 🍓"}
+
+/* ===== Hero ===== */
+.hero{display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap;padding-top:50px}
+
+/* ===== Bingkai foto ===== */
+.frame-wrap{position:relative;width:290px;height:340px;cursor:pointer}
+.frame{
+  position:absolute;inset:0;border-radius:150px 150px 28px 28px;padding:14px;
+  background:linear-gradient(145deg,var(--pink),var(--green));
+  border:5px solid #fff;
+  box-shadow:0 0 0 4px var(--pink-d),0 0 0 9px #fff,0 0 0 12px var(--green-d),0 18px 35px rgba(224,96,111,.25);
+  animation:glow 4s ease-in-out infinite;
+}
+@keyframes glow{50%{box-shadow:0 0 0 4px var(--red),0 0 0 9px #fff,0 0 0 12px var(--green-d),0 22px 40px rgba(111,184,138,.4)}}
+.frame .inner{width:100%;height:100%;border-radius:136px 136px 16px 16px;overflow:hidden;background:#fff;
+  display:flex;align-items:center;justify-content:center;text-align:center;font-size:14px;color:var(--pink-d);font-weight:700}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.deco{position:absolute;font-size:38px;filter:drop-shadow(0 3px 3px rgba(0,0,0,.15));animation:sway 3s ease-in-out infinite}
+.d1{top:-22px;left:-18px}.d2{top:-14px;right:-20px;animation-delay:.5s}
+.d3{bottom:20px;left:-30px;animation-delay:1s}.d4{bottom:-18px;right:-12px;animation-delay:1.5s}
+.d5{top:45%;right:-34px;font-size:28px;animation-delay:2s}
+@keyframes sway{50%{transform:rotate(14deg) scale(1.12)}}
+.hint{text-align:center;font-size:12px;margin-top:26px;color:var(--green-xd)}
+
+.intro{max-width:420px}
+.intro .hi{display:inline-block;background:var(--green);color:var(--green-xd);padding:5px 16px;border-radius:30px;font-weight:700;font-size:14px;margin-bottom:12px}
+.intro h1{font-family:'Pacifico',cursive;font-size:42px;color:var(--red-d);line-height:1.25;margin-bottom:10px}
+.intro p{line-height:1.7;margin-bottom:18px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:11px 26px;border-radius:30px;
+  background:linear-gradient(135deg,var(--red),var(--pink-d));color:#fff;box-shadow:0 6px 14px rgba(242,139,149,.45);transition:.25s}
+.btn:hover{transform:translateY(-3px) rotate(-2deg)}
+
+/* ===== Kartu ===== */
+.card{background:rgba(255,255,255,.9);border-radius:26px;padding:26px;border:3px solid var(--green);
+  box-shadow:8px 8px 0 var(--pink);position:relative}
+.card::after{content:"🍎";position:absolute;top:-16px;right:18px;font-size:26px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.biodata{list-style:none}
+.biodata li{display:flex;gap:10px;padding:10px 0;border-bottom:2px dotted var(--pink-d)}
+.biodata li:last-child{border:none}
+.biodata b{min-width:110px;color:var(--green-xd)}
+
+.skill{margin-bottom:14px}
+.skill span{font-weight:700;font-size:14px}
+.bar{height:14px;border-radius:20px;background:var(--pink);overflow:hidden;margin-top:5px}
+.bar i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,var(--green-d),var(--red));width:0;transition:width 1.4s ease}
+
+.proj{text-align:center;transition:.3s}
+.proj:hover{transform:translateY(-8px) rotate(-1.5deg)}
+.proj .ic{font-size:44px;margin-bottom:6px}
+.proj h3{color:var(--red-d);margin-bottom:6px}
+.proj p{font-size:14px;line-height:1.6}
+
+.contact{text-align:center}
+.contact a{display:inline-block;margin:6px;text-decoration:none;font-weight:700;color:var(--green-xd);
+  background:var(--green);padding:10px 22px;border-radius:30px;transition:.25s}
+.contact a:hover{background:var(--pink);color:var(--red-d);transform:scale(1.07)}
+
+footer{position:relative;z-index:1;text-align:center;padding:26px;color:var(--green-xd);font-weight:700;font-size:14px;
+  background:repeating-linear-gradient(90deg,var(--pink) 0 20px,var(--green) 20px 40px);}
+footer span{background:#fff;padding:6px 18px;border-radius:30px;display:inline-block}
+
+.reveal{opacity:0;transform:translateY(30px);transition:1s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:600px){.intro h1{font-size:32px}.hero{gap:34px}}
+</style>
+</head>
+<body>
+
+<span class="float f1">🍀</span><span class="float f2">🍓</span><span class="float f3">🍎</span>
+<span class="float f4">🍀</span><span class="float f5">🍓</span><span class="float f6">🍎</span>
+
+<nav>
+  <a href="#home">Beranda</a><a href="#tentang">Tentang</a><a href="#skill">Skill</a>
+  <a href="#karya">Karya</a><a href="#kontak">Kontak</a>
+</nav>
+
+<!-- ===== BERANDA ===== -->
+<section id="home" class="hero">
+  <div>
+    <div class="frame-wrap" onclick="document.getElementById('upload').click()" title="Klik untuk coba ganti foto">
+      <div class="frame">
+        <div class="inner" id="fotoBox">
+          <!-- GANTI "foto-saya.jpg" dengan nama file fotomu -->
+          <img src="naweb.jpeg" alt="Foto Khairun Nafisa" id="foto"
+               onerror="this.style.display='none';document.getElementById('ph').style.display='block'">
+          <span id="ph" style="display:none">📷<br>Taruh fotomu di sini<br>(foto-saya.jpg)</span>
+        </div>
+      </div>
+      <span class="deco d1">🍀</span><span class="deco d2">🍓</span>
+      <span class="deco d3">🍎</span><span class="deco d4">🍀</span><span class="deco d5">🍓</span>
+    </div>
+    <input type="file" id="upload" accept="image/*" hidden>
+    <p class="hint">✨ klik bingkai untuk pratinjau foto ✨</p>
+  </div>
+
+  <div class="intro">
+    <span class="hi">🌸 Halo, selamat datang!</span>
+    <h1>Khairun Nafisa</h1>
+    <p>Siswi <b>SMK Putra Anda</b> jurusan <b>Rekayasa Perangkat Lunak (RPL)</b>.belajar membuat website dan aplikasi.</p>
+    <a href="#karya" class="btn">Lihat Karyaku 🍓</a>
+  </div>
+</section>
+
+<!-- ===== TENTANG ===== -->
+<section id="tentang">
+  <h2 class="title reveal">Tentang Aku</h2>
+  <div class="grid">
+    <div class="card reveal">
+      <ul class="biodata">
+        <li><b>🍀 Nama</b> Khairun Nafisa</li>
+        <li><b>🍓 Sekolah</b> SMK Putra Anda</li>
+        <li><b>🍎 Kelas</b> XI</li>
+        <li><b>🌿 Jurusan</b> Rekayasa Perangkat Lunak (RPL)</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <p style="line-height:1.8">Aku tertarik pada dunia pemrograman dan desain tampilan web. Aku senang mencoba hal baru, belajar dari kesalahan, dan terus berkembang setiap hari. 🌱</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILL ===== -->
+<section id="skill">
+  <h2 class="title reveal">Kemampuanku</h2>
+  <div class="card reveal">
+    <!-- Ubah angka data-v (0-100) sesuai kemampuanmu -->
+    <div class="skill"><span>HTML &amp; CSS 🍀</span><div class="bar"><i data-v="85"></i></div></div>
+    <div class="skill"><span>JavaScript 🍓</span><div class="bar"><i data-v="65"></i></div></div>
+    <div class="skill"><span>PHP &amp; MySQL 🍎</span><div class="bar"><i data-v="60"></i></div></div>
+    <div class="skill"><span>Desain UI 🌸</span><div class="bar"><i data-v="75"></i></div></div>
+  </div>
+</section>
+
+<!-- ===== KARYA ===== -->
+<section id="karya">
+  <h2 class="title reveal">Karya &amp; Proyek</h2>
+  <div class="grid">
+    <div class="card proj reveal"><div class="ic">🛒</div><h3>Proyek 1</h3><p>yaitu membuat aplikasi seperti kasir,mendata stok barang dll.</p></div>
+    <div class="card proj reveal"><div class="ic">💻</div><h3>Proyek 2</h3><p>belajar fundamental tentang coding untuk lebih dalam.</p></div>
+    <div class="card proj reveal"><div class="ic">🎨</div><h3>Proyek 3</h3><p>belajar desain grafis.</p></div>
+  </div>
+</section>
+
+<!-- ===== KONTAK ===== -->
+<section id="kontak">
+  <h2 class="title reveal">Hubungi Aku</h2>
+  <div class="card contact reveal">
+    <p style="margin-bottom:14px">Yuk berteman dan berkolaborasi! 💌</p>
+    <!-- Ganti link sesuai akunmu -->
+    <a href="mailto:khairun.nafisa96@smk.belajar.id">📧 Email</a>
+    <a href="https://instagram.com/k.nafisa02" target="_blank">📸 Instagram</a>
+    <a href="https://wa.me/628xxxxxxxxxx" target="_blank">💬 WhatsApp</a>
+  </div>
+</section>
+
+<footer><span>🍀 Dibuat 💖 oleh Khairun Nafisa • SMK Putra Anda 🍓</span></footer>
+
+<script>
+// Pratinjau foto saat bingkai diklik
+document.getElementById('upload').addEventListener('change', e=>{
+  const f=e.target.files[0]; if(!f) return;
+  const img=document.getElementById('foto');
+  img.src=URL.createObjectURL(f);
+  img.style.display='block';
+  document.getElementById('ph').style.display='none';
+});
+
+// Animasi muncul saat di-scroll + isi bar skill
+const io=new IntersectionObserver(es=>{
+  es.forEach(en=>{
+    if(en.isIntersecting){
+      en.target.classList.add('show');
+      en.target.querySelectorAll('.bar i').forEach(b=>b.style.width=b.dataset.v+'%');
+    }
+  });
+},{threshold:.2});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
